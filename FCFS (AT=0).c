@@ -23,11 +23,14 @@ int main() {
         tat[i] = ct[i]; // Turnaround Time (TAT) = CT - AT; duration from when the process enters the queue until it completes
 
         wt[i] = tat[i] - bt[i]; // Waiting time (WT) = TAT - BT; total the process waited out of total time it took for execution
+        total_wt += wt[i];
+        total_tat += tat[i];
     }
     printf("\nBy FCFS approach\n");
     printf("\nPID\tBT\tCT\tTAT\tWT\n");
     for(int i = 0; i < n; i++) {
-    printf("P%d\t%d\t%d\t%d\t%d\n", i+1, bt[i], ct[i], tat[i], wt[i]);
-        
+    printf("P%d\t%d\t%d\t%d\t%d\n", i+1, bt[i], ct[i], tat[i], wt[i]);     
     }
-    return 0;
+printf("\nAverage Waiting Time = %.2f", total_wt / n);
+printf("\nAverage Turnaround Time = %.2f\n", total_tat / n);
+return 0;
