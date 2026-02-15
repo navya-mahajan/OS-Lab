@@ -42,13 +42,15 @@ int main() {
     for(int i = 0; i < n; i++) {
         tat[i] = ct[i] - at[i];
         wt[i] = tat[i] - bt[i];
+        total_wt += wt[i];
+        total_tat += tat[i];
     }
 
     printf("\nPID\tAT\tBT\tCT\tTAT\tWT\n");
     for(int i = 0; i < n; i++) {
-        printf("P%d\t%d\t%d\t%d\t%d\t%d\n",
-               pid[i], at[i], bt[i], ct[i], tat[i], wt[i]);
+        printf("P%d\t%d\t%d\t%d\t%d\t%d\n", pid[i], at[i], bt[i], ct[i], tat[i], wt[i]);
     }
-
-    return 0;
+printf("\nAverage Waiting Time = %.2f", total_wt / n);
+printf("\nAverage Turnaround Time = %.2f\n", total_tat / n);
+return 0;
 }
