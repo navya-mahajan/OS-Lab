@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    int n, total_wt, total_tat ;
     int at[20], bt[20], ct[20], tat[20], wt[20], pid[20];
     printf("Enter number of processes: ");
     scanf("%d", &n);
