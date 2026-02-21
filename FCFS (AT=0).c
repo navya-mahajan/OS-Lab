@@ -3,7 +3,9 @@
 
 #include <stdio.h>
 int main() {
-    int n, total_wt, total_ta;
+    int n;
+    float total_wt = 0;
+    float total_tat = 0;
     int bt[20], ct[20], tat[20], wt[20]; // arrival time = 0
     
     printf("Enter number of processes: ");
